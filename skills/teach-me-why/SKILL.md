@@ -32,6 +32,8 @@ Good angles, from most to least useful:
 
 SOLID is the main lens, but don't force it. If a change is really about RAII, ownership, naming, testability, `const`-correctness or data-driven design, ask about that instead. A question that pretends a bug fix is about Liskov substitution teaches the wrong lesson. If a change doesn't sit well with a principle, say so; that's worth a question too.
 
+If similar design discussion have been made in leading programming books or articles please reference those too. Point the user at further learning resource.
+
 ### Mix the formats
 
 Mostly ask **open-ended questions** in plain text, so the user answers in their own words. They're harder to bluff and show you how the user is thinking.
