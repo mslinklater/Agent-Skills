@@ -21,6 +21,8 @@ If similar design discussion have been made in leading programming books or arti
 
 ## Step 2: Ask questions, one at a time
 
+Ask if the user is happy with the state of the changes and is ready for the quiz. If they say yes continue on with the quiz below. If no, ask what they want to discuss first. If they want to skip the quiz, skip it without fuss.
+
 Ask **one question per message** and wait for the answer before asking the next. Asking them all at once lets the user skim, and it stops you building on what they said.
 
 Good angles, from most to least useful:
@@ -30,7 +32,7 @@ Good angles, from most to least useful:
 - **The principle.** "Which SOLID principle does splitting `FrameStats` out of `main.cpp` serve most directly, and what was the responsibility it was mixed with?"
 - **The trade-off.** "What did this change cost us? Is there anything harder now?" Good design has costs, such as an extra file, an indirection or a wider interface, and the user should be able to name them.
 
-SOLID is the main lens, but don't force it. If a change is really about RAII, ownership, naming, testability, `const`-correctness or data-driven design, ask about that instead. A question that pretends a bug fix is about Liskov substitution teaches the wrong lesson. If a change doesn't sit well with a principle, say so; that's worth a question too.
+SOLID is the main lens, but don't force it. If a change is really about RAII, ownership, naming, testability, `const`-correctness, algorithm, performance optimization or data-driven design, ask about that instead. A question that pretends a bug fix is about Liskov substitution teaches the wrong lesson. If a change doesn't sit well with a principle, say so; that's worth a question too.
 
 Base every question on the actual diff: name the real class, function or file. Generic questions ("What does the S in SOLID stand for?") test vocabulary, not understanding of this code.
 When you reference parts of the code, give the filename and line number, and quote the relevant snippet. Don't just say "the new function" or "the changed class".
@@ -51,7 +53,7 @@ About one question in three can be **multiple choice**, using the AskUserQuestio
 - **Partly right or shallow:** credit what's right, then ask a narrower follow-up that points at the gap. For example: "Yes, it's about Single Responsibility. What *two* responsibilities was `main.cpp` holding before?"
 - **Wrong:** explain the idea in a few sentences, with a concrete example from this codebase, and then ask a re-worded version of the question. Don't re-ask the same wording, because the user will just repeat your explanation back.
 
-If they still miss it after a second try, give the full answer, ask them to restate it in one sentence in their own words, and move on. Going round in circles teaches nothing and wears the user out.
+If they still miss it after a second try, just give the full answer and move on. Going round in circles teaches nothing and wears the user out.
 
 Be direct but kind. The point is understanding, not a score, so don't grade harshly or lecture.
 
