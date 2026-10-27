@@ -17,11 +17,11 @@ Scale it to the change. A one-line fix gets one question; a refactor that moves 
 
 Write your normal summary of what changed and where. Don't hold back the explanation to make the quiz harder, because the user still needs an honest account of the work. The questions in step 2 should go one level deeper than the summary, so they test understanding rather than recall of what you just wrote.
 
+If similar design discussion have been made in leading programming books or articles please reference those too. Point the user at further learning resource.
+
 ## Step 2: Ask questions, one at a time
 
 Ask **one question per message** and wait for the answer before asking the next. Asking them all at once lets the user skim, and it stops you building on what they said.
-
-Base every question on the actual diff: name the real class, function or file. Generic questions ("What does the S in SOLID stand for?") test vocabulary, not understanding of this code.
 
 Good angles, from most to least useful:
 
@@ -32,7 +32,8 @@ Good angles, from most to least useful:
 
 SOLID is the main lens, but don't force it. If a change is really about RAII, ownership, naming, testability, `const`-correctness or data-driven design, ask about that instead. A question that pretends a bug fix is about Liskov substitution teaches the wrong lesson. If a change doesn't sit well with a principle, say so; that's worth a question too.
 
-If similar design discussion have been made in leading programming books or articles please reference those too. Point the user at further learning resource.
+Base every question on the actual diff: name the real class, function or file. Generic questions ("What does the S in SOLID stand for?") test vocabulary, not understanding of this code.
+When you reference parts of the code, give the filename and line number, and quote the relevant snippet. Don't just say "the new function" or "the changed class".
 
 ### Mix the formats
 
